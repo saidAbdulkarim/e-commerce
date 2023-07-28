@@ -1,11 +1,15 @@
 package com.kp.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @Table(name = "products")
@@ -20,6 +24,5 @@ public class Product {
     private String description;
     private Double price;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_type_id")
-    private CategoryType categoryType ;
+    private CategoryType categoryType;
 }

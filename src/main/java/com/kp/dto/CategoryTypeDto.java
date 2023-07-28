@@ -10,6 +10,6 @@ import lombok.Setter;
 public class CategoryTypeDto {
     private Long id;
     private String name;
-    private CategoryDto categoryDto;
+    private CategoryDto category;
 
 }

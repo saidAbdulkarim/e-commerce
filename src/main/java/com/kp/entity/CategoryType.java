@@ -10,11 +10,8 @@ import lombok.Setter;
 @Setter
 @Getter
 @NoArgsConstructor
-public class CategoryType {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String name;
+public class CategoryType extends Lookup{
+  
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     private Category category;
